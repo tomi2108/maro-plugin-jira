@@ -18,10 +18,10 @@ export class JiraTaskTracker extends TaskTracker {
   override async save(task: Task) {
     const config = Config.getView();
     const jira = new Jira();
-    const parent_key = config.get("tasks.jira_parent_key");
+    const parent_key = config.get("jira.tasks.jira_parent_key");
     const project_key = config.get("jira.project_key");
     const labels = config.get("jira.labels");
-    if (!parent_key) throw new ConfigError("tasks.jira_parent_key");
+    if (!parent_key) throw new ConfigError("jira.tasks.jira_parent_key");
     if (!project_key) throw new ConfigError("jira.project_key");
     const parent_issue = await jira.getIssue(parent_key);
     const relative = task.getPathInProject();

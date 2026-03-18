@@ -1,6 +1,6 @@
 {
   "name": "maro-plugin-jira",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./dist/src/lib/index.js",
   "types": "./dist/src/lib/index.d.ts",
   "type": "commonjs",
